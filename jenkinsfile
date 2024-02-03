@@ -9,8 +9,8 @@ pipeline {
   stages {
     stage("Building AMI") {
       steps {
-        sh "packer init aw-ami.pkr.hcl"
-        sh "packer build aw-ami.pkr.hcl"
+        sh "/usr/local/bin/packer init aw-ami.pkr.hcl"
+        sh "/usr/local/bin/packer build aw-ami.pkr.hcl"
       }
     }
   } 
