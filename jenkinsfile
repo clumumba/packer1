@@ -1,17 +1,13 @@
 pipeline {
   agent any
- // enviroments{
-   //   AWS_ACCESS_KEY = credentials ('jenkins_aws_access_key_id')
-     // AWS_SECRET_KEY = credentials ('jenkins_aws_secret_key')
-      
- // }
-  }
   stages {
     stage("Building AMI") {
       steps {
         sh "/usr/local/bin/packer init aw-ami.pkr.hcl"
-        sh "/usr/local/bin/packer build aw-ami.pkr.hcl"
+        sh "/usr/local/bin/
+        packer build aw-ami.pkr.hcl"
       }
     }
   } 
+}
 
