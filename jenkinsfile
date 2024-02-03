@@ -1,9 +1,10 @@
 pipeline {
-  agent {
-    any {
-      image 'hashicorp/packer:latest'
-      args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
-    }
+  agent any
+  enviroments{
+      AWS_ACCESS_KEY = credentials ('jenkins_aws_access_key_id')
+      AWS_SECRET_KEY = credentials ('jenkins_aws_secret_key')
+      
+  }
   }
   stages {
     stage("Building AMI") {
@@ -13,4 +14,4 @@ pipeline {
       }
     }
   } 
-}
+
