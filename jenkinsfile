@@ -1,10 +1,10 @@
 pipeline {
   agent any
-  enviroments{
-      AWS_ACCESS_KEY = credentials ('jenkins_aws_access_key_id')
-      AWS_SECRET_KEY = credentials ('jenkins_aws_secret_key')
+ // enviroments{
+   //   AWS_ACCESS_KEY = credentials ('jenkins_aws_access_key_id')
+     // AWS_SECRET_KEY = credentials ('jenkins_aws_secret_key')
       
-  }
+ // }
   }
   stages {
     stage("Building AMI") {
