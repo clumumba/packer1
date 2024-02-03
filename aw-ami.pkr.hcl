@@ -28,30 +28,3 @@ build {
     script = "./provisioner.sh"
   }
 }
-
-
-#   provisioner "shell" {
-#       source = "./provisioner.sh"
-#       destination = "/tmp/provisioner.sh"
-#   }
-
-#   # provisioner "shell" {
-#   #   inline = ["chmod a+x /tmp/provisioner.sh"]
-#   # }
-
-#   # provisioner "shell" {
-#   #   inline = ["ls -la /tmp"]
-#   # }
-
-#   # provisioner "shell" {
-#   #   inline = ["pwd"]
-#   # }
-
-#   # provisioner "shell" {
-#   #   inline = ["cat /tmp/provisioner.sh"]
-#   # }
-
-#   # provisioner "shell" {
-#   #   inline = ["/bin/bash -x /tmp/provisioner.sh"]
-#   # }
-# }
