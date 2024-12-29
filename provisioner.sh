@@ -23,3 +23,4 @@ sudo sleep 3
 #insall docker 
 sudo yum install docker -y
 sudo systemctl start docker
+sudo yum install nginx -y
